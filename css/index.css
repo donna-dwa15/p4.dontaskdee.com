@@ -1,0 +1,47 @@
+/*
+Accordion menu styling
+*/
+#accordion .ui-accordion-header{  
+    background: #CADBEC;  
+	border: 2px solid #000000;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:0px;
+	margin:0px;
+} 
+#accordion .ui-accordion-header:last-of-type {  
+    border-radius:0px;
+	border: 2px 2px 0px 2px;
+} 
+
+#accordion .ui-accordion-content{
+	border-radius:0px;
+	border:2px solid #000000;
+}
+#accordion .ui-accordion-content:last-of-type{
+	border:0px 2px 2px 2px solid #000000;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+/* End accordion menu styling */
+
+#new_features {
+	float:left;
+	height:auto;
+	color:#000000;
+}
+#new_features img {
+	width:30px;
+	height:30px;
+	padding-right:5px;
+	vertical-align:bottom;
+}
+#vert_line  img {
+	float:left;
+	height:280px;
+}
+#login {
+	color:#94002D;
+	border:0px;
+}
