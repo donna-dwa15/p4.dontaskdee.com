@@ -11,10 +11,6 @@
 			<time datetime="<?=Time::display($created,'Y-m-d',$user->timezone)?>">
 				<?=Time::display($created,'F j, Y',$user->timezone)?>
 			</time><br/>
-			Profile Last Updated: 
-			<time datetime="<?=Time::display($last_modified,'Y-m-d @ H:i',$user->timezone)?>">
-				<?=Time::display($last_modified,'F j, Y @ g:ia',$user->timezone)?>
-			</time><br/>
 			Number of Comics Created: <?=$comic_count?>
 			<br/>
 			<?php if(isset($last_comic)): ?>
