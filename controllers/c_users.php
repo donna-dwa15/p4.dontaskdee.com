@@ -435,6 +435,7 @@ class users_controller extends base_controller
 				$this->template->content->last_modified = $profile_user['modified'];
 				$this->template->content->last_comic = $profile_user['last_comic_created'];
 				$this->template->content->user = $this->user;
+				$this->template->content->user_name = $profile_user['user_name'];
 				
 				$comic_q = "SELECT count(*) as comic_count
 							FROM comics
