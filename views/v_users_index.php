@@ -15,20 +15,14 @@
 	There are <?=$comic_count?> public comics available!<br/>
 	<br/>
 	<?php if($new_count > 0): ?>
-	There are <?=$new_count?> new comics to read!<br/>
-	The most recent comic:<br/>
-	<article>
-		<!-- Print the name of the comic's creator and date created -->
-		<span class="user_info">
-			<?=$last_comic['first_name']?> <?=$last_comic['last_name']?> created on 
-			<time datetime="<?=Time::display($last_comic['created'],'Y-m-d @ H:i',$user->timezone)?>">
-				<?=Time::display($random_post['created'],'F j, Y @ g:ia',$user->timezone)?>
-			</time>
-		</span>	
-		<!-- Display newest comic -->
-		<p><?=$last_comic['comic_html']?></p>
-	</article>
+	There are <?=$new_count?> new comics to read!<br/><br/>
 	<? else: ?>
 		There are no new comics.<br/>
 	<?php endif; ?>
 </div>
+<?php if($new_count > 0): ?>
+<div>
+	<header><h2>Latest comic:</h2></header>
+	<?=$last_comic['comic_html']?>
+</div>
+<?php endif; ?>
