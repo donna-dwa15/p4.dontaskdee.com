@@ -11,7 +11,7 @@
 <body>
 	<div id="menu">
 		<!-- Home link logo -->
-		<a href="/">Logo here</a>
+		<a href="/"><img src="/images/catsmeow_logo.png" alt="Home"/></a>
 		<span class="text_link">
 			<!-- Top Menu for users who are logged in -->
 			<?php if($user): ?>
