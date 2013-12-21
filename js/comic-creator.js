@@ -103,11 +103,11 @@ $('.selectable-characters').click(function(){
 
 //make characters resizable
 $('#character-preview').resizable(
-		{ aspectRatio:true },
-		{ containment:"parent"},
-		{ minHeight:100 },
-		{ maxHeight:200 },
-		{ autoHide:true}
+	{ aspectRatio:true },
+	{ containment:"parent"},
+	{ minHeight:100 },
+	{ maxHeight:200 },
+	{ autoHide:true}
 );
 
 //make characters draggable
