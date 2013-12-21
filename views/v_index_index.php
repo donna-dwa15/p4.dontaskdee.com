@@ -1,16 +1,25 @@
-<h1>Welcome!</h1>
+<h1>Welcome to the Cat's Meow Comic Creator!</h1>
 <!-- Left hand content -->
 <div id="new_features">
+	<p>
+		Use our custom tools to create your own personal comic strips!  Choose your characters, backgrounds and text.  The possibilities are endless!
+		<br/><br/>
+		You can create your own comic strips to:
+		<ul>
+			<li>share with other users!</li>
+			<li>keep for yourself!</li>
+			<li>to print and share!</li>
+		</ul>
+		Sign up today and start creating!
+		<img src="/images/meower_head.png" alt="Meow!"/>
+	</p>
 </div>
-<!-- Content divider -->
-<div id="vert_line">
-	<img src="/images/v_line.png" alt=""/>
-</div>
+
 <!-- Right hand content -->
 <div id="form_content">
 	<div id="accordion">
 		<header id="login">
-			<h2>Ready to create? Login!</h2>
+			<h2><img src="/images/meower_head.png" alt="Meow!"/>Ready to create? Login!</h2>
 		</header>
 		<!-- Login form -->
 		<div>
@@ -27,7 +36,7 @@
 		</div>
 		<!-- For new users -->
 		<header id="new_user">
-			<h2>New user? Sign up!</h2>
+			<h2><img src="/images/meower_head.png" alt="Meow!"/>New user? Sign up!</h2>
 		</header>
 		<div>
 			<!-- User signup form -->
