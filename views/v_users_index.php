@@ -3,13 +3,13 @@
 <div id="users">
 	<?php if(isset($last_login)): ?>
 	Last logged in on 
-	<time datetime="<?=Time::display($last_login,'Y-m-d @ H:i.',$user->timezone)?>">
-		<?=Time::display($last_login,'F j, Y @ g:ia.',$user->timezone)?>
+	<time datetime="<?=Time::display($last_login,'Y-m-d H:i.',$user->timezone)?>">
+		<?=Time::display($last_login,'F j, Y g:ia.',$user->timezone)?>
 	</time>
 	<br/><br/>
 	<?php endif; ?>
-	You are hoarding <?=$private_count?> of your comics.</br>
-	You are sharing <?=$public_count?> of your comics.</br>
+	You are hoarding <?=$private_count?> of your comics.<br/>
+	You are sharing <?=$public_count?> of your comics.<br/>
 	<br/>
 	There are <?=$user_count?> other creators.<br/>
 	There are <?=$comic_count?> public comics available!<br/>
