@@ -12,10 +12,10 @@
 		<?php endif; ?>
 		<!-- Required form fields -->
 		<label for="user_name">User Name</label><br/>
-		<input type="text" size="30" maxlength="50" id="user_name" name="user_name" value="<?=$_SESSION['user_name']?>"/><br/>
+		<input type="text" size="30" maxlength="50" id="user_name" name="user_name" value="<?=$_SESSION['user_name']?>" required/><br/>
 		<label for="password">Password</label><br/> 
-		<input type="password" size="30" maxlength="50" id="password" name="password"/><br/>
-		<input type="image" src="/images/login_btn.png" alt="login!"/>	
+		<input type="password" size="30" maxlength="50" id="password" name="password" required/><br/>
+		<input type="image" src="/images/login_btn.png" alt="login!"/>
 	</form>
 	<span id="new_user">
 		New user? Sign up!
