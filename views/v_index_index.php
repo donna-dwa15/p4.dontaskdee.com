@@ -1,18 +1,16 @@
 <h1>Welcome to the Cat's Meow Comic Creator!</h1>
 <!-- Left hand content -->
 <div id="new_features">
-	<p>
-		Use our custom tools to create your own personal comic strips!  Choose your characters, backgrounds and text.  The possibilities are endless!
-		<br/><br/>
-		You can create your own comic strips to:
-		<ul>
-			<li>share with other users!</li>
-			<li>keep for yourself!</li>
-			<li>print and share!</li>
-		</ul>
-		Sign up today and start creating!
-		<img src="/images/meower_head.png" alt="Meow!"/>
-	</p>
+	Use our custom tools to create your own personal comic strips!  Choose your characters, backgrounds and text.  The possibilities are endless!
+	<br/><br/>
+	You can create your own comic strips to:
+	<ul>
+		<li>share with other users!</li>
+		<li>keep for yourself!</li>
+		<li>print and share!</li>
+	</ul>
+	Sign up today and start creating!
+	<img src="/images/meower_head.png" alt="Meow!"/>
 </div>
 
 <!-- Right hand content -->
@@ -25,11 +23,11 @@
 		<div>
 		<form method="POST" action="/users/p_login">
 			<label for="user_name">User Name</label><br/>
-			<input type="text" size="30" maxlength="50" id="user_name" name="user_name"/>
+			<input type="text" size="30" maxlength="50" id="user_name" name="user_name" required/>
 			<br/>
 			<label for="password">Password</label>
 			<br/>
-			<input type="password" size="30" maxlength="50" id="password" name="password"/>
+			<input type="password" size="30" maxlength="50" id="password" name="password" required/>
 			<br/>
 			<input type="image" src="/images/login_btn.png" alt="login!"/>
 		</form>
@@ -51,22 +49,22 @@
 				<?php endif; ?>
 				<!-- User info fields -->
 				<label for="first_name">First Name</label><br/>
-				<input type="text" id="first_name" name="first_name" size="30" maxlength="150" value=""/>
+				<input type="text" id="first_name" name="first_name" size="30" maxlength="150" value="" required/>
 				<br/>
 				<label for="last_name">Last Name</label><br/>
-				<input type="text" id="last_name" name="last_name" size="30" maxlength="150" value=""/>
+				<input type="text" id="last_name" name="last_name" size="30" maxlength="150" value="" required/>
 				<br/>
 				<label for="email">Email</label><br/>
-				<input type="text" id="email" name="email" size="30" maxlength="150" value=""/>
+				<input type="text" id="email" name="email" size="30" maxlength="150" value="" required/>
 				<br/>
 				<label for="user_name">User Name</label><br/>
-				<input type="text" id="user_name" name="user_name" size="30" maxlength="50" value=""/>
+				<input type="text" id="new_user_name" name="user_name" size="30" maxlength="50" value="" required/>
 				<br/>
 				<label for="password">Password</label><br/>
-				<input type="password" id="password" name="password" size="30" maxlength="50" value=""/>
+				<input type="password" id="new_password" name="password" size="30" maxlength="50" value="" required/>
 				<br/>
 				<label for="password_confirm">Confirm Password</label><br/>
-				<input type="password" id="password_confirm" name="password_confirm" size="30" maxlength="50" value=""/>
+				<input type="password" id="password_confirm" name="password_confirm" size="30" maxlength="50" value="" required/>
 				<br/>
 				<input type="hidden" name="timezone"/>
 				<script>
