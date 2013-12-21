@@ -14,11 +14,6 @@
 					<?=Time::display($comic['created'],'F j, Y g:ia',$user->timezone)?>
 				</time>
 			</span>		
-			<!-- Display Unfollow Button if post is not from current user -->
-			<?php //if($comic['comic_user_id'] != $user->user_id): ?>
-			<!--	<a href="/posts/post_unfollow/<?=$post['post_user_id']?>"><img src="/images/unstalk_btn_2.png" alt="Unstalk!"/></a>-->
-			<?php //endif; ?>		
-			<!-- Display post content -->
 			<p><?=$comic['comic_html']?></p>
 		</article>
 	<?php endforeach; ?>
