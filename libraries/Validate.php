@@ -27,7 +27,7 @@ class Validate {
 			elseif($key == 'user_name')
 			{
 				if(trim($value) == FALSE || !self::is_valid_username($value))
-						$errors[] = "Valid user name is required.  Must be at least 2 letters and/or digits with optional underscore.";
+						$errors[] = "Valid user name is required.  Must be at least 5 letters and/or digits with optional underscore.";
 			}
 			elseif($key == 'password')
 			{
@@ -64,7 +64,9 @@ class Validate {
 	-------------------------------------------------------------------------------------------------*/
 	public static function is_valid_username($str)
 	{
-		if(preg_match('/^[a-zA-Z0-9]+_?[a-zA-Z0-9]+$/D',$str))
+		if(strlen($str) < 5)
+			return false;
+		elseif (preg_match('/^[a-zA-Z0-9]+_?[a-zA-Z0-9]+$/D',$str))
 			return true;
 			
 		return false;
