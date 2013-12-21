@@ -82,8 +82,8 @@
 					<header><h2 id="preview-header">2. Enter Text and Drag the Balloon to a Panel</h2></header>
 					<textarea id="caption" maxlength="60" cols="22" rows="3" placeholder="TYPE TEXT HERE"></textarea>
 					<div class="bubble-preview-span" id="preview-block">
-						<blockquote id="bubble-preview">
-							<p id="bubble-text"></p>
+						<blockquote id="bubble-preview" class="bubble-preview">
+							<p id="bubble-text" class="bubble-text"></p>
 						</blockquote>
 						<!-- Clickable icon to flip balloon horizontally -->
 					</div>
