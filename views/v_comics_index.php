@@ -10,7 +10,7 @@
 				</time> - [<?=$comic['status']?>]
 			</span>
 			<a href="/comics/delete/<?=$comic['comic_id']?>">Delete!</a>
-			<p><?=$comic['comic_html']?></p>
+			<?=$comic['comic_html']?>
 		</article>
 	<?php endforeach; ?>
 	<?php if(count($comics)==0): ?>
