@@ -126,11 +126,21 @@ $(".comic-panels").droppable(
 		
 		//Character max has already been reached for the panel, ignore new drop
 		if(character_count[this_panel] == max_characters && ui.draggable.hasClass('characters'))
+		{
+				$('#character-alert').html('Max characters reached in '+this_panel.replace('-',' ')+'.'); 
 				return;
+		}
 		//Text balloon max has already been reached for the panel, ignore new drop
 		if(balloon_count[this_panel] == max_balloons && ui.draggable.hasClass('bubble-preview-span'))
+		{
+				$('#balloon-alert').html('<br/>Max balloons reached in '+this_panel.replace('-',' ')+'.'); 
 				return;
-				
+		}
+		
+		//clear alerts
+		$('#balloon-alert').html('');
+		$('#character-alert').html('');
+		
 		var new_clone = ui.draggable.clone();
 		
 		if(new_clone.hasClass('characters'))
@@ -271,8 +281,6 @@ $('#save').click(function() {
 	var canvas_clone = $('#comic-strip').clone();
 	var canvas = canvas_clone.prop('outerHTML');
 	var status = $('#status:checked').val();
-	
-	alert(canvas);
 	
 	if(!status)
 		status = "private";
