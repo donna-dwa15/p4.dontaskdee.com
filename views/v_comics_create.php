@@ -25,6 +25,7 @@
 				<header><h2>Enter a Title and Your Name</h2></header>
 				<input type="text" id="title-text" maxlength="50" value="Your Title"/> by 
 				<input type="text" id="author-text" maxlength="50" value="Your Name"/>
+				<div id="char-max"></div>
 			</div>
 			<!-- End title/credits tab/menu -->
 			
@@ -46,8 +47,7 @@
 			<!-- End background picker -->
 		
 			<!-- Character tab for adding characters to comic -->
-			<div id="character-tool">     
-				<!--header><h2>Drag and Drop Characters to Panels</h2></header-->
+			<div id="character-tool">
 				<header><h2>1. Click a Character to Preview and Edit</h2></header>
 				<div class="selectable-characters" id="character-icon-1"></div>
 				<div class="selectable-characters" id="character-icon-2"></div>
@@ -63,7 +63,7 @@
 					<br/>
 				</div>
 				<div class="clearfix"></div>
-				<header id="character-header-3"><h2>3. Delete a placed character by double-clicking it.</h2></header><br/>
+				<header id="character-header-3"><h2>3. Delete a placed character by double-clicking it.</h2></header>
 				* Max 2 characters per panel
 			</div>
 			<!-- End Character tab/menu -->
@@ -90,7 +90,7 @@
 					<br/>
 				</div>
 				<div class="clearfix"></div>
-				<header id="balloon-header-3"><h2>3. Delete a placed balloon by double-clicking it.</h2></header><br/>
+				<header id="balloon-header-3"><h2>3. Delete a placed balloon by double-clicking it.</h2></header>
 				* Max 3 balloons per panel
 			</div>
 			<!-- End Text tab/menu -->
