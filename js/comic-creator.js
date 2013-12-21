@@ -19,14 +19,36 @@ Title Tab menu events
 $('#title-text').keyup(function(){
 	//replace certain characters so we have clean output - no funny script insertions
 	var title_text = $(this).val().replace(/</g,"&#60;");
+	var max_chars = 50;
 	$('#title').html(title_text);
+	
+	if(title_text.length == 50)
+		$('#char-max').html('Max characters reached for your title');
+	else
+		$('#char-max').html('');
+});
+
+//Clear title error messaging when text input loses focus
+$('#title-text').focusout(function(){
+	$('#char-max').html('');
 });
 
 //Detect changes and update comic strip author info
 $('#author-text').keyup(function(){
 	//replace certain characters so we have clean output - no funny script insertions
 	var author_text = $(this).val().replace(/</g,"&#60;");
+	var max_chars = 50;
 	$('#author').html(author_text);
+	
+	if(author_text.length == 50)
+		$('#char-max').html('Max characters reached for your name');
+	else
+		$('#char-max').html('');
+});
+
+//Clear title error messaging when text input loses focus
+$('#author-text').focusout(function(){
+	$('#char-max').html('');
 });
 
 /*-------------------------------------------------------------------------------------------------
@@ -249,6 +271,8 @@ $('#save').click(function() {
 	var canvas_clone = $('#comic-strip').clone();
 	var canvas = canvas_clone.prop('outerHTML');
 	var status = $('#status:checked').val();
+	
+	alert(canvas);
 	
 	if(!status)
 		status = "private";
