@@ -14,8 +14,9 @@
 					<?=Time::display($comic['created'],'F j, Y g:ia',$user->timezone)?>
 				</time>
 			</span>		
-			<p><?=$comic['comic_html']?></p>
+			<?=$comic['comic_html']?>
 		</article>
+		<br/>
 	<?php endforeach; ?>
 	<?php if(count($comics)==0): ?>
 		<article>
