@@ -1,7 +1,7 @@
 /*
 Accordion menu styling
 */
-#accordion .ui-accordion-header{  
+#accordion .ui-accordion-header {  
     background: #CADBEC;  
 	border: 2px solid #000000;
 	border-top-left-radius:10px;
@@ -12,14 +12,14 @@ Accordion menu styling
 } 
 #accordion .ui-accordion-header:last-of-type {  
     border-radius:0px;
-	border: 2px 2px 0px 2px;
+	border: 2px 2px 0px 2px solid #000000;
 } 
 
 #accordion .ui-accordion-content{
 	border-radius:0px;
 	border:2px solid #000000;
 }
-#accordion .ui-accordion-content:last-of-type{
+#accordion .ui-accordion-content:last-of-type {
 	border:0px 2px 2px 2px solid #000000;
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
