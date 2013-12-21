@@ -8,7 +8,7 @@
 		<ul>
 			<li>share with other users!</li>
 			<li>keep for yourself!</li>
-			<li>to print and share!</li>
+			<li>print and share!</li>
 		</ul>
 		Sign up today and start creating!
 		<img src="/images/meower_head.png" alt="Meow!"/>
