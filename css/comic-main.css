@@ -350,7 +350,7 @@ http://css-tricks.com/examples/ShapesOfCSS/
 }
 
 /* Pad and format text in bubbles */
-#bubble-text {
+#bubble-text, .bubble-text {
 	display:inline-block;
 	word-break:break-all;
 	padding:0px 3px;
@@ -392,24 +392,24 @@ End Menu and menu content styles
 Comic strip area styles
 -------------------------------------------------------------------------------------------------*/
 
-#comic-title {
+#comic-title, .comic-title {
 	font:16px arial;
 	font-weight:bold;
 	margin-left:7px;
 	margin-top:10px;
 }
 
-#comic-strip {
+#comic-strip, .comic-strip {
 	width:950px;
 }
 
-#copy {
+#copy, .copy {
 	font:15px arial;
 	text-align:right;
 	margin-right:10px;
 }
 
-#panel-1, #panel-2, #panel-3 {
+#panel-1, #panel-2, #panel-3, .panel-1, .panel-2, .panel-3 {
 	position:relative;
 	float:left;
 	display:inline-block;
@@ -421,7 +421,7 @@ Comic strip area styles
 	overflow:hidden;
 }
 
-#panel-2, #panel-3 {
+#panel-2, #panel-3, .panel-2, .panel-3 {
 	margin-left:10px;
 }
 
