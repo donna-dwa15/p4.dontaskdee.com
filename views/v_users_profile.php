@@ -4,6 +4,7 @@
 	<!-- Profile content -->
 	<div id="profile_info">
 		<?php if(!isset($error)): ?>
+			User Name: <?=$user_name?><br/>
 			Name: <?=$first_name?> <?=$last_name?><br/>
 			Email: <?=$email?><br/>
 			Approximate Location: <?=$location?><br/> 
@@ -11,7 +12,7 @@
 			<time datetime="<?=Time::display($created,'Y-m-d',$user->timezone)?>">
 				<?=Time::display($created,'F j, Y',$user->timezone)?>
 			</time><br/>
-			Number of Comics Created: <?=$comic_count?>
+			Number of Comics Shared: <?=$comic_count?>
 			<br/>
 			<?php if(isset($last_comic)): ?>
 			Last comic created on:
