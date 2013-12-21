@@ -7,7 +7,7 @@
 			Name: <?=$first_name?> <?=$last_name?><br/>
 			Email: <?=$email?><br/>
 			Approximate Location: <?=$location?><br/> 
-			Meower Since: 
+			Creator Since: 
 			<time datetime="<?=Time::display($created,'Y-m-d',$user->timezone)?>">
 				<?=Time::display($created,'F j, Y',$user->timezone)?>
 			</time><br/>
