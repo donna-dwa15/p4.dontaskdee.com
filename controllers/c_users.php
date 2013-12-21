@@ -19,7 +19,8 @@ class users_controller extends base_controller
 			# Display user's welcome page
 			$this->template->title = "Welcome to ".APP_NAME;
 			$this->template->content = View::instance('v_users_index');
-			$client_files = Array("/css/users.css");
+			$client_files = Array("/css/users.css",
+						"/css/comic-main.css");
 			$this->template->client_files_head = Utils::load_client_files($client_files);
 			
 			# Save previous login time before we update it
@@ -27,6 +28,10 @@ class users_controller extends base_controller
 			{
 				$this->template->content->last_login = $_SESSION['last_login'];
 			}
+			
+			# Update last logged in time
+			$data = Array("last_login" => Time::now());
+			DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
 			
 			# Get number of total created comics by this user
 			
@@ -58,11 +63,17 @@ class users_controller extends base_controller
 				
 			$user_count = DB::instance(DB_NAME)->select_field($q);
 			
+			if(!isset($_SESSION['last_login']))
+				$where_clause = "";
+			else
+				$where_clause = "created > '".$_SESSION['last_login']."' AND ";
+				
 			# Get number of new users + new comics since last login.
 			$q = "SELECT count(*) as new_count
 				FROM comics 
-				WHERE created > '".$_SESSION['last_login']."'
-				 AND user_id<>".$this->user->user_id;
+				WHERE ".$where_clause."
+				 user_id<>".$this->user->user_id."
+				 AND status='public'";
 		
 			$new_count = DB::instance(DB_NAME)->select_field($q);
 
@@ -77,7 +88,8 @@ class users_controller extends base_controller
 					FROM users
 					INNER JOIN comics USING (user_id)
 					WHERE comics.user_id<>".$this->user->user_id.
-					" ORDER BY comics DESC
+					" AND comics.status='public' 
+					ORDER BY comics.created DESC
 					LIMIT 1";
 					
 				$last_comic = DB::instance(DB_NAME)->select_row($q);
@@ -200,7 +212,7 @@ class users_controller extends base_controller
 
 			# Create an encrypted token via their user name and a random string
 			$_POST['token'] = sha1(TOKEN_SALT.$_POST['user_name'].Utils::generate_random_string());	
-
+			
 			# Insert this user into the database
 			$user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
@@ -208,9 +220,6 @@ class users_controller extends base_controller
 			setcookie("token", $_POST['token'], strtotime('+2 day'), '/');
 
 			Router::redirect("/users/profile/");
-			# Default set up of having user "follow" self so they can view their posts
-			# alongside the ones they actually follow
-			//Router::redirect("/posts/follow/".$user_id);
 		}
 	}
 
