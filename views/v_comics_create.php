@@ -63,6 +63,7 @@
 					<br/>
 				</div>
 				<div class="clearfix"></div>
+				<div id="character-alert"></div>
 				<header id="character-header-3"><h2>3. Delete a placed character by double-clicking it.</h2></header>
 				* Max 2 characters per panel
 			</div>
@@ -90,6 +91,8 @@
 					<br/>
 				</div>
 				<div class="clearfix"></div>
+				<br/>
+				<div id="balloon-alert"></div>
 				<header id="balloon-header-3"><h2>3. Delete a placed balloon by double-clicking it.</h2></header>
 				* Max 3 balloons per panel
 			</div>
