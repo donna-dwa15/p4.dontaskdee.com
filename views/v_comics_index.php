@@ -7,7 +7,7 @@
 				Created on 
 				<time datetime="<?=Time::display($comic['created'],'Y-m-d H:i',$user->timezone)?>">
 					<?=Time::display($comic['created'],'F j, Y g:ia',$user->timezone)?>
-				</time>
+				</time> - [<?=$comic['status']?>]
 			</span>
 			<a href="/comics/delete/<?=$comic['comic_id']?>">Delete!</a>
 			<p><?=$comic['comic_html']?></p>
@@ -15,7 +15,7 @@
 	<?php endforeach; ?>
 	<?php if(count($comics)==0): ?>
 		<article>
-			<p>You have no saved comics.  Create one <a href="/comics/create/">now</a>!</p>
+			<p>You have no saved comics.  Create one <a href="/comics/create">now</a>!</p>
 		</article>
 	<?php endif; ?>
 </div>
