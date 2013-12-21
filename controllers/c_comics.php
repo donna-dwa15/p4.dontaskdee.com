@@ -34,8 +34,14 @@ class comics_controller extends base_controller
 		# Run the query
 		$comics = DB::instance(DB_NAME)->select_rows($q);
 
+		$cleaned_comics = array();
+		# Clean up comic html to pass html validations
+		# Get rid of duplicate IDs and fix styles
+		# Could probably be done in the original html/js code but quickest method for now
+		$cleaned_comics = Comic::clean_comic_strip($comics);
+		
 		# Pass data to the View
-		$this->template->content->comics = $comics;
+		$this->template->content->comics = $cleaned_comics;
 
 		# Render the View
 		echo $this->template;
@@ -65,9 +71,15 @@ class comics_controller extends base_controller
 
 		# Run the query
 		$comics = DB::instance(DB_NAME)->select_rows($q);
+		
+		$cleaned_comics = array();
+		# Clean up comic html to pass html validations
+		# Get rid of duplicate IDs and fix styles
+		# Could probably be done in the original html/js code but quickest method for now
+		$cleaned_comics = Comic::clean_comic_strip($comics);
 
 		# Pass data to the View
-		$this->template->content->comics = $comics;
+		$this->template->content->comics = $cleaned_comics;
 
 		# Render the View
 		echo $this->template;
@@ -155,7 +167,7 @@ class comics_controller extends base_controller
 	{
 		# Set up the View
 		$this->template->content = View::instance("v_comics_users");
-		$this->template->title   = "Potential Prey";
+		$this->template->title   = "Other Creators";
 		$client_files = Array("/css/users.css");
 		$this->template->client_files_head = Utils::load_client_files($client_files);
 
@@ -189,18 +201,6 @@ class comics_controller extends base_controller
 		{			
 			$this->template->content->message = "Your search did not return any results.";
 		}
-
-		# Build the query to figure out what connections does this user already have? 
-		# I.e. who are they following
-		/*$q = "SELECT * 
-			FROM users_users
-			WHERE user_id = ".$this->user->user_id;
-*/
-		# Execute this query with the select_array method
-		# select_array will return our results in an array and use the "users_id_followed" field as the index.
-		# This will come in handy when we get to the view
-		# Store our results (an array) in the variable $connections
-//		$connections = DB::instance(DB_NAME)->select_array($q, 'user_id_followed');
 
 		$connections = array();
 
