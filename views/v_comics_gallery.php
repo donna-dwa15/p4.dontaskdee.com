@@ -19,7 +19,7 @@
 	<?php endforeach; ?>
 	<?php if(count($comics)==0): ?>
 		<article>
-			<p>There are no comics.  Go create one <a href="/comics/create/">now</a>!</p>
+			<p>There are no comics.  Go create one <a href="/comics/create">now</a>!</p>
 		</article>
 	<?php endif; ?>
 </div>
