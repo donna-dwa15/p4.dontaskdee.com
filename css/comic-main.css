@@ -194,6 +194,12 @@ Comic Character Menu style
 	display:none;
 }
 
+/* Alert messaging for max characters */
+#character-alert {
+	font: 16px arial;
+	color: red;
+}
+
 /*-------------------------------------------------------------------------------------------------
 Comic Text Menu styles
 
@@ -370,6 +376,12 @@ http://css-tricks.com/examples/ShapesOfCSS/
 	position:relative;
 	float:left;
 	padding-right:3px;
+}
+
+/* Alert messaging for max balloons */
+#balloon-alert {
+	font: 16px arial;
+	color: red;
 }
 
 /*-------------------------------------------------------------------------------------------------
