@@ -16,7 +16,7 @@ class comics_controller extends base_controller
 	{
 		# Set up the View
 		$this->template->content = View::instance('v_comics_index');
-		$this->template->title   = "The Gallery";
+		$this->template->title   = "My Comics";
 		$client_files = Array("/css/comic-main.css");
 		$this->template->client_files_head = Utils::load_client_files($client_files);
 		
