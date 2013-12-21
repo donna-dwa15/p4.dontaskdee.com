@@ -29,6 +29,7 @@ Accordion menu styling
 #new_features {
 	float:left;
 	height:auto;
+	width:400px;
 	color:#000000;
 }
 #new_features img {
@@ -39,9 +40,15 @@ Accordion menu styling
 }
 #vert_line  img {
 	float:left;
-	height:280px;
+	height:360px;
 }
 #login {
 	color:#94002D;
 	border:0px;
+}
+#login img, #new_user img {
+	height:30px;
+	width:30px;
+	padding-right:5px;
+	vertical-align:bottom;
 }
