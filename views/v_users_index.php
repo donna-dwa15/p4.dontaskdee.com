@@ -4,7 +4,7 @@
 	<?php if(isset($last_login)): ?>
 	Last logged in on 
 	<time datetime="<?=Time::display($last_login,'Y-m-d H:i.',$user->timezone)?>">
-		<?=Time::display($last_login,'F j, Y g:ia.',$user->timezone)?>
+		<?=Time::display($last_login,'F j, Y g:ia',$user->timezone)?>
 	</time>
 	<br/><br/>
 	<?php endif; ?>
