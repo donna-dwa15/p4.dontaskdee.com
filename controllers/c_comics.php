@@ -25,7 +25,8 @@ class comics_controller extends base_controller
 			comics.comic_id,
 			comics.comic_html,
 			comics.created,
-			comics.user_id AS comic_user_id
+			comics.user_id AS comic_user_id,
+			status
 			FROM comics
 			WHERE comics.user_id = " . $this->user->user_id .
 			" ORDER by comics.created desc";
@@ -55,7 +56,7 @@ class comics_controller extends base_controller
 			comics.user_id AS comic_user_id,
 			users.first_name,
 			users.last_name,
-			users.email
+			users.user_name
 			FROM comics
 			INNER JOIN users 
 			ON comics.user_id = users.user_id
@@ -80,7 +81,6 @@ class comics_controller extends base_controller
 		$client_files = Array("/css/post.css",
 				"/css/comic-main.css",
 				"/css/jquery-ui.min.css");
-				//"http://fonts.googleapis.com/css?family=Walter+Turncoat");
 		$this->template->client_files_head = Utils::load_client_files($client_files);
 
 		$client_files = Array("/js/jquery-1.9.1.min.js",
